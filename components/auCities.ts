@@ -1,0 +1,60 @@
+export const AU_CITIES: string[] = [
+  // NSW
+  "Sydney",
+  "Newcastle",
+  "Wollongong",
+  "Central Coast",
+  "Albury",
+  "Wagga Wagga",
+  "Dubbo",
+  "Tamworth",
+  "Coffs Harbour",
+  "Port Macquarie",
+  // VIC
+  "Melbourne",
+  "Geelong",
+  "Ballarat",
+  "Bendigo",
+  "Mildura",
+  "Shepparton",
+  "Warrnambool",
+  "Traralgon",
+  // QLD
+  "Brisbane",
+  "Gold Coast",
+  "Sunshine Coast",
+  "Townsville",
+  "Cairns",
+  "Toowoomba",
+  "Mackay",
+  "Rockhampton",
+  "Bundaberg",
+  "Hervey Bay",
+  // WA
+  "Perth",
+  "Fremantle",
+  "Mandurah",
+  "Bunbury",
+  "Geraldton",
+  "Kalgoorlie",
+  "Albany",
+  "Broome",
+  // SA
+  "Adelaide",
+  "Mount Gambier",
+  "Whyalla",
+  "Port Augusta",
+  "Port Lincoln",
+  // TAS
+  "Hobart",
+  "Launceston",
+  "Devonport",
+  "Burnie",
+  // ACT / NT
+  "Canberra",
+  "Darwin",
+  "Alice Springs",
+  "Palmerston",
+
+  // 你也可以继续加……
+];

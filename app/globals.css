@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 15, 17, 21; /* Dark Charcoal #0F1115 */
+  --background-end-rgb: 15, 17, 21;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1115;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Utility for hiding scrollbar but allowing scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/*添加动画*/
+
+/* animate-logo-breath 工具类，用来让“KaePett”文字做很轻微的呼吸放大动画 */
+@keyframes logo-breath {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@layer utilities {
+  .animate-logo-breath {
+    animation: logo-breath 3s ease-in-out infinite;
+  }
+}
+@keyframes paw-wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(6deg);
+  }
+}
+/* 让小爪子可以旋转，别用 inline */
+.paw-icon {
+  display: inline-block;
+}
+/* hover 到整个 logo 区域时，小爪子轻微晃一下 */
+.logo-wrapper:hover .paw-icon {
+  animation: paw-wiggle 0.6s ease-in-out;
+}
